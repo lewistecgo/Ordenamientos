@@ -6,7 +6,6 @@ using namespace std;
 int * crearAleatorios(int n)
 {
     int* numeros = new int [n];
-
     for(int i = 0; i < n; i++)
     {
         numeros[i] = rand() % n*10; 
@@ -30,7 +29,6 @@ void bubleSort(int *& numeros, int n)
         }
         n--;
     }
-    cout << "Ordenando" << endl;
 }
 
 void imprimir(int *numeros, int tam)
@@ -44,12 +42,11 @@ void imprimir(int *numeros, int tam)
 
 int main()
 {
-    int n = 10;
+    int n = 100;
     int *numeros = crearAleatorios(n);
+    cout << "Cantidad de numeros: "<<n<<endl;
     imprimir(numeros, n);
     bubleSort(numeros, n);
     imprimir(numeros, n);
-
-
     return 0;
 }
